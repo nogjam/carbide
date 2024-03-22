@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "carbide"
+version = "0.1.0"
+description = "A collection of tools for increasing developer productivity."
+authors = ["Nathaniel Jones <nathaniel-j-jones@proton.me>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+click = "^8.1.7"
+
+[tool.poetry.scripts]
+carbide = "carbide.cli.root:cli_root"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

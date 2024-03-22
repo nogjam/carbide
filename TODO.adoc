@@ -1,0 +1,9 @@
+= TODO
+
+* [ ] Create "self" or "config" group with "enable-completion" command to auto-generate the necessary autocomplete stuff according to directions at https://click.palletsprojects.com/en/8.1.x/shell-completion/#enabling-completion.
+* [ ] Create command to get you in the state for PR review w/ a specified repo and branch.
+* [ ] Command to go to a registered dir.
+* [ ] Command to register a specified .py argparse script for running thru this CLI.
+* [ ] Command to make a TOML-based acronym file. Possibly convert it to Asciidoc too.
+* [ ] Command to help create estimation tables. Would be nice to be able to sum hour estimates by row and column. Could be AsciiDoc!
+* [ ] Command to take me to the specified section of a specified/registered repo.

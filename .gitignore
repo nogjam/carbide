@@ -1,0 +1,7 @@
+### IDE ###
+.vscode
+
+### PYTHON ###
+__pycache__/
+# Handy to have a debugging script.
+debug.py
