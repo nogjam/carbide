@@ -8,3 +8,4 @@
 * [ ] Command to help create estimation tables. Would be nice to be able to sum hour estimates by row and column. Could be AsciiDoc!
 * [ ] Command to take me to the specified section of a specified/registered repo.
 * [ ] Command using `nmap` to map desktop network topology.
+* [ ] Would be nice to integrate some sort of TODO tracking on a large scale (like a TODO list you might keep on your whiteboard).
