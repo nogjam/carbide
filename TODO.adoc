@@ -7,3 +7,4 @@
 * [ ] Command to make a TOML-based acronym file. Possibly convert it to Asciidoc too.
 * [ ] Command to help create estimation tables. Would be nice to be able to sum hour estimates by row and column. Could be AsciiDoc!
 * [ ] Command to take me to the specified section of a specified/registered repo.
+* [ ] Command using `nmap` to map desktop network topology.
