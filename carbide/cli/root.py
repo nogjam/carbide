@@ -7,6 +7,7 @@ from typing import Any
 import click
 
 from ..config import REPO_ROOT_DIR
+from ..local import LocalData
 from .gen_description_from_script import gen_description_from_script
 
 
@@ -55,11 +56,17 @@ def copy_group():
     ...
 
 
+@cli_root.group("register")
+def register_group():
+    """For registering local entities with carbide."""
+    ...
+
+
 @copy_group.command(
     "files-with-name", help=gen_description_from_script("copy_all_files_with_name.sh")
 )
 @click.argument("name")
-@click.argument("source", type=click.Path(file_okay=False, exists=True))
+@click.argument("source", type=click.Path(exists=True, file_okay=False))
 @click.argument("dest", type=click.Path(file_okay=False))
 @click.pass_context
 def copy_all_files_with_name_command(
@@ -82,3 +89,10 @@ def copy_all_files_with_name_command(
             ],
             capture_output=True,
         )
+
+
+@register_group.command("git-repo", help="Register a git repo for quick access.")
+@click.argument("path", type=click.Path(exists=True, file_okay=False))
+def register_git_repo_command(path: str):
+    LocalData.register_git_repo(path)
+    click.echo(f"Directory is: {path}")

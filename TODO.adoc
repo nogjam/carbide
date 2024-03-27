@@ -7,5 +7,6 @@
 * [ ] Command to make a TOML-based acronym file. Possibly convert it to Asciidoc too.
 * [ ] Command to help create estimation tables. Would be nice to be able to sum hour estimates by row and column. Could be AsciiDoc!
 * [ ] Command to take me to the specified section of a specified/registered repo.
+** [ ] Allow overwriting registered git repos, e.g. if it is relocated on the system.
 * [ ] Command using `nmap` to map desktop network topology.
 * [ ] Would be nice to integrate some sort of TODO tracking on a large scale (like a TODO list you might keep on your whiteboard).

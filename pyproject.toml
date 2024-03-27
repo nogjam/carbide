@@ -9,6 +9,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.10"
 click = "^8.1.7"
+platformdirs = "^4.2.0"
 
 [tool.poetry.scripts]
 carbide = "carbide.cli.root:cli_root"
