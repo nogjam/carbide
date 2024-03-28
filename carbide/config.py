@@ -7,6 +7,7 @@ import platformdirs
 
 
 REPO_ROOT_DIR: Path = Path(__file__).parents[1]
+REPO_TEST_DIR: Path  = REPO_ROOT_DIR / "tests"
 
 current_user: str = getpass.getuser()
 

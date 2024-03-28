@@ -6,6 +6,11 @@ from pathlib import Path
 from typing import Any
 
 from .config import USER_DATA_DIR
+from .exception import CarbideException
+
+
+class NotAGitRepoError(CarbideException):
+    _default_message = "{repo_path} is not a git repository"
 
 
 class LocalData:
@@ -17,11 +22,17 @@ class LocalData:
         self.store = LocalDataStore()
 
     @classmethod
-    def register_git_repo(cls, path_str: str):
-        """Register a git repo."""
+    def register_git_repo(cls, path_str: str) -> str:
+        """Register a git repo. Returns the name of the registered repo."""
+        repo_path: Path = Path(path_str)
+        if not (repo_path / ".git").is_dir():
+            raise NotAGitRepoError.with_default_message(repo_path=repo_path)
+
         obj: LocalData = LocalData()
-        obj.store["git_repos"][""]
-        path = Path(path_str)
+        repo_name: str = repo_path.name
+        obj.store["git_repos"][repo_name] = {"path": str(repo_path)}
+        obj.store.write()
+        return repo_name
 
 
 class LocalDataStore(Mapping):
@@ -31,7 +42,7 @@ class LocalDataStore(Mapping):
 
     def __init__(self) -> None:
         if not self._file_path.exists():
-            self.data = dict()
+            self.data = self._empty_data()
             with open(self._file_path, "w") as jf:
                 json.dump(self.data, jf)
             return
@@ -40,7 +51,7 @@ class LocalDataStore(Mapping):
             self.data = json.load(jf)
 
     def __getitem__(self, key: Any) -> Any:
-        return self.data.get(key)
+        return self.data[key]
 
     def __setitem__(self, key: Any, value: Any) -> None:
         self.data[key] = value
@@ -50,3 +61,11 @@ class LocalDataStore(Mapping):
 
     def __len__(self) -> int:
         return len(self.data)
+
+    def _empty_data(self) -> dict:
+        return {"git_repos": {}}
+
+    def write(self) -> None:
+        """Write the user data store."""
+        with open(self._file_path, "w") as jf:
+            json.dump(self.data, jf)

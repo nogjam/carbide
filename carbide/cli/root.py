@@ -7,7 +7,7 @@ from typing import Any
 import click
 
 from ..config import REPO_ROOT_DIR
-from ..local import LocalData
+from ..local import LocalData, NotAGitRepoError
 from .gen_description_from_script import gen_description_from_script
 
 
@@ -94,5 +94,8 @@ def copy_all_files_with_name_command(
 @register_group.command("git-repo", help="Register a git repo for quick access.")
 @click.argument("path", type=click.Path(exists=True, file_okay=False))
 def register_git_repo_command(path: str):
-    LocalData.register_git_repo(path)
-    click.echo(f"Directory is: {path}")
+    try:
+        registered_name: str = LocalData.register_git_repo(path)
+    except NotAGitRepoError as e:
+        raise click.UsageError(str(e))
+    click.echo(f"Registered: {registered_name}")

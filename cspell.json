@@ -1,8 +1,9 @@
 {
     "version": "0.2",
     "language": "en",
-    "allowCompoundWords": true,
+    "allowCompoundWords": false,
     "words": [
+        "argparse",
         "nmap",
         "platformdirs"
     ]
