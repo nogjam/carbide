@@ -1,7 +1,9 @@
 = TODO
 
-* [ ] Create "self" or "config" group with "enable-completion" command to auto-generate the necessary autocomplete stuff according to directions at https://click.palletsprojects.com/en/8.1.x/shell-completion/#enabling-completion.
-* [ ] Create command to get you in the state for PR review w/ a specified repo and branch.
+* [ ] Create "self" or "config" group.
+** [ ] Command "enable-completion" to auto-generate the necessary autocomplete stuff according to directions at https://click.palletsprojects.com/en/8.1.x/shell-completion/#enabling-completion.
+** [ ] Command "check-dependencies" to check whether the necessary system packages for carbide are present (e.g. the `code` command).
+* [ ] Command to get you in the state for PR review w/ a specified repo and branch.
 * [ ] Command to go to a registered dir.
 * [ ] Command to register a specified .py argparse script for running thru this CLI.
 * [ ] Command to make a TOML-based acronym file. Possibly convert it to Asciidoc too.
@@ -9,4 +11,9 @@
 * [ ] Command to take me to the specified section of a specified/registered repo.
 ** [ ] Allow overwriting registered git repos, e.g. if it is relocated on the system.
 * [ ] Command using `nmap` to map desktop network topology.
+** [ ] Command to set IP addresses of desktop devices according to a configured/registered map (could add to `register` group).
 * [ ] Would be nice to integrate some sort of TODO tracking on a large scale (like a TODO list you might keep on your whiteboard).
+* [ ] Command to go through a full firmware build + deploy + reboot.
+* [ ] Make sure users can easily plumb their own Click commands into the system.
+** [ ] Test
+** [ ] Document
