@@ -14,6 +14,9 @@
 ** [ ] Command to set IP addresses of desktop devices according to a configured/registered map (could add to `register` group).
 * [ ] Would be nice to integrate some sort of TODO tracking on a large scale (like a TODO list you might keep on your whiteboard).
 * [ ] Command to go through a full firmware build + deploy + reboot.
+** [ ] `notify-send` when it's done.
+*** [ ] Sugar: Have a logo for carbide to put with the notify-send.
 * [ ] Make sure users can easily plumb their own Click commands into the system.
 ** [ ] Test
 ** [ ] Document
+* [ ] Command for registering Outlook PWA for notify-sends of calendar events. Unfortunately Outlook PWA doesn't work in this regard.
