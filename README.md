@@ -5,7 +5,7 @@
     - [Rationale](#rationale)
 
 
-A collection of tools for increasing developer productivity.
+The developer's edge - a collection of tools for increasing productivity.
 
 ## scripts/ dir
 
