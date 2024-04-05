@@ -24,3 +24,4 @@
 ** [ ] Document
 * [ ] Command for registering Outlook PWA for notify-sends of calendar events. Unfortunately Outlook PWA doesn't work in this regard.
 * [ ] Command for listing/pushing any non-pushed commits in any of your Git repos.
+* [ ] Add global cspell dictionary management.
