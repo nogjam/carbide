@@ -25,3 +25,6 @@
 * [ ] Command for registering Outlook PWA for notify-sends of calendar events. Unfortunately Outlook PWA doesn't work in this regard.
 * [ ] Command for listing/pushing any non-pushed commits in any of your Git repos.
 * [ ] Add global cspell dictionary management.
+* [ ] Streamline: `watch -n 300 'echo $(date && git pull 2>&1 | tail -n 1) >> /tmp/git-pull-watchlog.log && cat /tmp/git-pull-watchlog.log | tail'`
+** Ref. https://askubuntu.com/questions/501017/gnu-watch-without-erasing-previous-outputs/1512631#1512631
+** Would want to auto-allocate a file in `/tmp` using a GUID or similar.
