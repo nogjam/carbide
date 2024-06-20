@@ -29,3 +29,4 @@
 ** Ref. https://askubuntu.com/questions/501017/gnu-watch-without-erasing-previous-outputs/1512631#1512631
 ** Would want to auto-allocate a file in `/tmp` using a GUID or similar.
 * [ ] Command for using https://github.com/eradman/entr[`entr`] (you can APT-install it)
+* [ ] Paste example commands for a select set of useful tools into the console. It's often helpful to have an example usage you can tweak.
