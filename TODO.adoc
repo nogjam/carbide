@@ -30,3 +30,12 @@
 ** Would want to auto-allocate a file in `/tmp` using a GUID or similar.
 * [ ] Command for using https://github.com/eradman/entr[`entr`] (you can APT-install it)
 * [ ] Paste example commands for a select set of useful tools into the console. It's often helpful to have an example usage you can tweak.
+* [ ] Separate out into a carbide organization
+** [ ] carbide-core
+** [ ] carbide-*-plugin repos
+*** [ ] carbide-timeline-plugin. Inspiration: https://github.com/IBM/timeline-generator (possibly slim down to eliminate pandas dep.).
+**** [ ] Write a script to parse things like `epics` and `standalone_issues` directories.
+*** [ ] carbide-todo-plugin. Inspiration: https://github.com/arkadianriver/hqtodo
+** [ ] carbide-workspace-template
+*** [ ] `.code-workspace` file recommending Todo-Highlight extension and configuring carbide-specific keywords, maybe with grey background
+* [ ] Settle out a carbide color scheme: muted colors, dark grey, light grey, dull yellow, bright yellow, dull orange, bright orange, forest green, cobalt blue
