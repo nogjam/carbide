@@ -7,9 +7,11 @@ license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
 click = "^8.1.7"
+matplotlib = "^3.9.2"
 platformdirs = "^4.2.0"
+python = "^3.10"
+pandas = "^2.2.3"
 
 [tool.poetry.scripts]
 carbide = "carbide.cli.root:cli_root"
