@@ -39,3 +39,7 @@
 ** [ ] carbide-workspace-template
 *** [ ] `.code-workspace` file recommending Todo-Highlight extension and configuring carbide-specific keywords, maybe with grey background
 * [ ] Settle out a carbide color scheme: muted colors, dark grey, light grey, dull yellow, bright yellow, dull orange, bright orange, forest green, cobalt blue
+* [ ] Syncing of specified files. Would be handy to be able to have a version-controlled "dev workspace preferences" repo to be cloned at work, home, or elsewhere.
+** [ ] Make local configuration updates that can then be synced back to the cloned repo. Version control would then allow you to commit those changes.
+** [ ] Allow ignoring of certain patterns in specified sync files.
+** [ ] Allow ignoring of certain paths.
