@@ -4,6 +4,9 @@
     "allowCompoundWords": false,
     "words": [
         "argparse",
+        "getopt",
+        "longoptions",
+        "ltrim",
         "nmap",
         "platformdirs"
     ]
